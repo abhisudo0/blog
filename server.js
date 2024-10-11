@@ -8,8 +8,9 @@ const User = require('./models/User');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+require('dotenv').config();
 
-const mongoURI = 'mongodb+srv://kumar:password88@cluster0.9z6au.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0ing';
+
 
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
@@ -21,7 +22,7 @@ mongoose.connect(mongoURI, {
 });
 
 app.use(session({
-    secret: 'your-secret-key',
+    secret: '',
     resave: false,
     saveUninitialized: true,
 }));
