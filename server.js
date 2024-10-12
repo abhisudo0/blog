@@ -22,7 +22,7 @@ mongoose.connect(mongoURI, {
 });
 
 app.use(session({
-    secret: '',
+    secret: 'SECRET_KEY',
     resave: false,
     saveUninitialized: true,
 }));
