@@ -9,10 +9,10 @@ const User = require('./models/User');
 const app = express();
 const PORT = process.env.PORT || 3000;
 require('dotenv').config();
+console.log(process.env);
 
 
-
-mongoose.connect(mongoURI, {
+mongoose.connect(process.env.mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(() => {
